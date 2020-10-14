@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentCounselling"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="HomePage" Height="450" Width="800">
     <Grid>
@@ -22,9 +23,10 @@
                 <Grid Background="LightBlue">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="116*"/>
+                        <ColumnDefinition Width="198*"/>
+                        <ColumnDefinition Width="314*"/>
+                        <ColumnDefinition Width="157*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10"/>
@@ -36,20 +38,20 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Student Name" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <Label Content="Father's Name" Grid.Row="2" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <Label Content="Mother's Name" Grid.Row="3" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <TextBox x:Name="tbStudentName"  Grid.Column="2" Grid.Row="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="tbFatherName" Grid.Column="2" Grid.Row="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="tbMotherName" Grid.Column="2" Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <Label Content="Date Of Birth" Grid.Row="4" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <DatePicker x:Name="tbDOB" FontSize="15" Height="25" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                    <Label Content="School Studied In" Grid.Row="5" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <TextBox x:Name="tbSchool"  Grid.Column="2" Grid.Row="5" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <Label Content="Year of Passing" Grid.Row="6" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <TextBox x:Name="tbPassYear"  Grid.Column="2" Grid.Row="6" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <Label Content="Current Address" Grid.Row="7" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <TextBox x:Name="tbAddress" Height="80" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.Column="2" Grid.Row="7" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                    <Label Content="Student Name" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <Label Content="Father's Name" Grid.Row="2" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <Label Content="Mother's Name" Grid.Row="3" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbStudentName"  Grid.Column="3" Grid.Row="1" FontSize="20" VerticalAlignment="Center"/>
+                    <TextBox x:Name="tbFatherName" Grid.Column="3" Grid.Row="2" FontSize="20" VerticalAlignment="Center"/>
+                    <TextBox x:Name="tbMotherName" Grid.Column="3" Grid.Row="3" FontSize="20" VerticalAlignment="Center"/>
+                    <Label Content="Date Of Birth" Grid.Row="4" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <DatePicker x:Name="tbDOB" FontSize="15" Height="25" Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    <Label Content="School Studied In" Grid.Row="5" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbSchool"  Grid.Column="3" Grid.Row="5" FontSize="20" VerticalAlignment="Center"/>
+                    <Label Content="Year of Passing" Grid.Row="6" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbPassYear"  Grid.Column="3" Grid.Row="6" FontSize="20" VerticalAlignment="Center"/>
+                    <Label Content="Current Address" Grid.Row="7" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbAddress" Height="80" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="7" FontSize="20" VerticalAlignment="Center"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabDocDetail">
@@ -84,19 +86,62 @@
                     <Label Content="Nativity Certificate" Grid.Row="5" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <Label Content="Transfer Certificate" Grid.Row="6" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <Label Content="JEE Marklist" Grid.Row="7" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    
-                    <TextBox x:Name="tbBirthCert"  Grid.Column="2" Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="tbIDProof"  Grid.Column="2" Grid.Row="4" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="tbNativityCert"   Grid.Column="2" Grid.Row="5" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="tbTransferCert"  Grid.Column="2" Grid.Row="6" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="tbJEEMain"  Grid.Column="2" Grid.Row="7" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
-                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="2">
+                        <Button x:Name="tbJEEMain" Click="OnJeeMainUpload" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/folder.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Margin="20,0,0,0" x:Name="tbJeeMain" VerticalAlignment="Center">           
+                            <Hyperlink Click="jeeMainLinkClick">
+                                <TextBlock x:Name="jeeMainHyperlink"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="2">
+                        <Button x:Name="btnTransferCert" Click="OnTransferCertUpload" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/folder.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Margin="20,0,0,0" x:Name="tbTransferCert" VerticalAlignment="Center">           
+                            <Hyperlink Click="transferCertLinkClick">
+                                <TextBlock x:Name="transferHyperLink"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="2" >
+                        <Button x:Name="btnNativityCert" Grid.Column="2" Click="OnNativityUpload" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/folder.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Margin="20,0,0,0" x:Name="tbNativity" VerticalAlignment="Center">           
+                            <Hyperlink Click="nativityLinkClick">
+                                <TextBlock x:Name="nativityHyperLink"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="2" >
+                        <Button x:Name="btnIdProof" Grid.Column="2" Click="OnIdProofUpload" Grid.Row="0" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/folder.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Margin="20,0,0,0" x:Name="tbIdProof" VerticalAlignment="Center">           
+                            <Hyperlink Click="IDProofLink">
+                                <TextBlock x:Name="idProofHyperlinkText"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2" >
                         <Button x:Name="btnTenthMarklist" Grid.Column="2" Click="OnTenthMLUpload" Grid.Row="0" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
                             <Button.Background>
                                 <ImageBrush ImageSource="Images/folder.png" />
                             </Button.Background>
                         </Button>
-                        <TextBlock Grid.Column="3" Grid.Row="0" x:Name="tbTenthMLClick" VerticalAlignment="Center">           
+                        <TextBlock Grid.Column="3" Grid.Row="0" Margin="20,0,0,0" x:Name="tbTenthMLClick" VerticalAlignment="Center">           
                             <Hyperlink Click="TenthMLClicked">
                                 <TextBlock x:Name="hyperlinkText"/>
                             </Hyperlink>
@@ -108,7 +153,7 @@
                                 <ImageBrush ImageSource="Images/folder.png" />
                             </Button.Background>
                         </Button>
-                        <TextBlock Grid.Column="3" Grid.Row="0" x:Name="tbTwelfthMarkListClick" VerticalAlignment="Center">           
+                        <TextBlock Grid.Column="3" Grid.Row="0" Margin="20,0,0,0" x:Name="tbTwelfthMLClick" VerticalAlignment="Center">           
                             <Hyperlink Click="TwelthMLClicked">
                                 <TextBlock x:Name="hyperlinkTextTwelthML"/>
                             </Hyperlink>
@@ -120,9 +165,21 @@
                                 <ImageBrush ImageSource="Images/folder.png" />
                             </Button.Background>
                         </Button>
-                        <TextBlock Grid.Column="3" Grid.Row="0" x:Name="tbCommCertClick" VerticalAlignment="Center">           
+                        <TextBlock Grid.Column="3" Grid.Row="0" Margin="20,0,0,0" x:Name="tbCommCertClick" VerticalAlignment="Center">           
                             <Hyperlink Click="CommCertClicked">
                                 <TextBlock x:Name="hyperlinkTextCommCert"/>
+                            </Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="2">
+                        <Button x:Name="btnBirthCert" Grid.Column="2" Click="OnBirthCertClick" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/folder.png" />
+                            </Button.Background>
+                        </Button>
+                        <TextBlock Margin="20,0,0,0" x:Name="tbBirthCert" VerticalAlignment="Center">           
+                            <Hyperlink Click="hlBirthCertClicked">
+                                <TextBlock x:Name="hyperLinkBirthCert"/>
                             </Hyperlink>
                         </TextBlock>
                     </StackPanel>
@@ -135,6 +192,31 @@
                         <TextBlock Text="Mark Details" Foreground="Blue" />
                     </StackPanel>
                 </TabItem.Header>
+                <Grid Background="LightBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Maths" Grid.Row="0" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <Label Content="Physics" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <Label Content="Chemistry" Grid.Row="2" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <Label Content="English" Grid.Row="3" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <Label Content="JEE Main" Grid.Row="4" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                    <TextBox x:Name="tbMath" Width="100"  Grid.Column="2" Grid.Row="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                    <TextBox x:Name="tbPhysics" Width="100" Grid.Column="2" Grid.Row="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                    <TextBox x:Name="tbChemistry"  Width=" 100" Grid.Column="2" Grid.Row="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                    <TextBox x:Name="tbEnglish" Width="100" Grid.Column="2" Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                    <TextBox x:Name="tbJEE" Width="100" Grid.Column="2" Grid.Row="4" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                </Grid>
             </TabItem>
             <TabItem x:Name="tabChoice">
                 <TabItem.Header>
@@ -142,6 +224,46 @@
                         <TextBlock Text="Course Selection" Foreground="Blue" />
                     </StackPanel>
                 </TabItem.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                        <Label Content="College Name :" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbCollegeName" Width="200" Height="25" SelectionChanged="cbCollegeName_Selected"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                        <Label Content="Course Name :" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbCourseName" Width="200" Height="25"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
+                        <Label Content="Priority :" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <xctk:IntegerUpDown Name="udPriority" Height="25" />
+                        <Button x:Name="btnAddCourse" Content=" Add " Height="25" Margin="10,0,0,0" Click="btnAddCourse_Click"/>
+                    </StackPanel>
+                    <ListView Margin="10" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Name="lvSelectedCourse">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="College Name" Width="300" DisplayMemberBinding="{Binding CollegeName}" />
+                                <GridViewColumn Header="Course Name" Width="300" DisplayMemberBinding="{Binding CourseName}" />
+                                <GridViewColumn Header="Priority" Width="50" DisplayMemberBinding="{Binding Priority}" />
+                                <GridViewColumn Header="" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button x:Name="removeCourse" Content="Remove" Click="RemoveCourse"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
             <TabItem x:Name="tabAllocation">
                 <TabItem.Header>
